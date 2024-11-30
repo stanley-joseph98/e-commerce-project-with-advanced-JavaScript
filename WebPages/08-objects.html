@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  
+  <script>
+    //Objects example
+    const product = {
+      name: 'socks',
+      price: 1090
+    }
+    console.log(product);
+    console.log(product.name);
+
+    //To cange a value of a property
+    product.name = 'cotton socks';
+    console.log(product.name);
+
+    //Adding a value to an object
+    product.newProperty = true;
+    console.log(product);
+    
+
+    //Deleting a project
+    delete product.newProperty;
+    //confirm it has been deleted
+    console.log(product);
+
+    //confirm the type of product
+    console.log(typeof product);
+
+    //Using JSON.stringify() to convert objects to string:
+    const jsonString = JSON.stringify(product);
+    console.log(jsonString);
+
+    //Changing the string back to objects
+    jsonObject = JSON.parse(jsonString);
+    console.log(jsonObject);
+    console.log(typeof jsonObject);
+
+    // Next is localStorage -- used to store items permanently, but locally and not in a database. It overcomes storage in variables which gets deleted once the page is refreshed. See how it is done in rock-paper-scissor game
+
+
+
+  </script>
+</body>
+</html>
