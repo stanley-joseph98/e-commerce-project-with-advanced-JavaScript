@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  
+  <script>
+    //Objects example
+    const product = {
+      name: 'socks',
+      price: 1090
+    }
+    console.log(product);
+    console.log(product.name);
+
+    //To cange a value of a property
+    product.name = 'cotton socks';
+    console.log(product.name);
+
+    //Adding a value to an object
+    product.newProperty = true;
+    console.log(product);
+    
+
+    //Deleting a project
+    delete product.newProperty;
+    //confirm it has been deleted
+    console.log(product);
+
+    //confirm the type of product
+    console.log(typeof product);
+
+    //Using JSON.stringify() to convert objects to string:
+    const jsonString = JSON.stringify(product);
+    console.log(jsonString);
+
+    //Changing the string back to objects
+    jsonObject = JSON.parse(jsonString);
+    console.log(jsonObject);
+    console.log(typeof jsonObject);
+
+    // Next is localStorage -- used to store items permanently, but locally and not in a database. It overcomes storage in variables which gets deleted once the page is refreshed. See how it is done in rock-paper-scissor game
+
+
+    //Auto-boxing -- JS automatically wraps strings in a "box" of method
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    //Objects reference
+    const object1 = {
+      message: 'hello'
+    };
+
+    //Copying the reference and not the object
+    const object2 = object1;
+
+    object1.message = "Good job";
+    console.log(object1)
+    console.log(object2)
+
+    //We can't compare the objects directly
+    const object3 = {
+      message: "Good job"
+    };
+    console.log(object3 === object1); //confirms two objects are not equal to each other even though they have the same values.
+    console.log(object2 === object1);
+
+    //SHORTCUTS FOR OBJECTS
+    const object4 = {
+      message: "Good job",
+      price: 799,
+    };
+    //To get message property
+    //const message = object4.message; //can be rewritten using a shortcut called destructuring such as 
+    const { message, price } = object4;
+    console.log(message);
+    console.log(price);
+
+    //Shorthand property
+    //Incase we want to create a new object:
+    // const object5 = {
+    //   message: message
+    // };
+    // console.log(object5) can be rewritten as
+    const object5 = {
+      message,
+      method: function func1(){
+        console.log("method");
+      } // can be rewritten as below
+    };
+    console.log(object5);
+
+    //Shorthand method -- see method in object5 above
+    const object6 = {
+      message,
+      method(){
+        console.log("method");
+      } // can be rewritten as below
+    };
+    console.log(object6);
+    object6.method();
+
+  </script>
+</body>
+</html>

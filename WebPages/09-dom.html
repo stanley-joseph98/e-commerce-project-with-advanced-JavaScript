@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model</title>
+</head>
+<body>
+  <button class="first-button" onclick="
+    document.querySelector('.first-button').innerHTML = 'Submitted';
+    ">Submit</button>
+  <button class="js-button">Second button</button>
+  
+  <script>
+    /*
+    //Changing the title of the page
+    document.title = 'DOM';
+
+    //Changing the contents of HTML page
+    //document.body.innerHTML = 'Changed';
+    document.body.innerHTML = '<button>Hello</button>';
+    */
+
+    //Getting any element from the page and put it inside JavaScript
+    console.log(document.querySelector('button')); //It will find 'button' element and put it inside the JS
+
+    //To find the HTML code/property inside the element found by the querySelector: 
+    console.log(document.querySelector('button').innerHTML);
+
+    //To change the code/property of that element i.e from 'Hello' to 'submit':
+    document.querySelector('button').       innerHTML = 'Submit';
+
+    //What if we had two Buttons? querySelector only gets the first button. So we use attributes
+    document.querySelector('.js-button').innerHTML = 'Resubmit'; //.js-button denotes a class selector
+
+    
+
+
+    
+  </script>
+</body>
+</html>
